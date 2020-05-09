@@ -27,4 +27,4 @@ potencia = len(lista)
 for i in lista:
     potencia -= 1
     total += i * (16 ** potencia)
-print(total)
+print(f'O número Hexadecimal "{hex}" convertido para Decimal fica: {total}')
