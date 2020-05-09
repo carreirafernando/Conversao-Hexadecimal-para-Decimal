@@ -13,7 +13,7 @@ def verificacao():
         return 15
 
 
-hex = input('Digite: ')
+hex = input('Digite a numeração Hexadecimal: ')
 lista = []
 for i in hex:
     if i in '0123456789':
@@ -22,7 +22,6 @@ for i in hex:
         num = verificacao()
         lista.append(num)
 
-print(lista)
 total = 0
 potencia = len(lista)
 for i in lista:
