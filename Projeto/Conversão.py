@@ -12,19 +12,21 @@ def verificacao():
     elif i == 'f':
         return 15
 
+def transformacao():
+    total = 0
+    cont = len(hexadecimal)
+    for n in hexadecimal:
+        cont -= 1
+        total += n * (16 ** cont)
+    return total
 
-hex = input('Digite a numeração Hexadecimal: ')
-lista = []
+hex = input('Digite a numeração Hexadecimal: ').strip().lower()
+hexadecimal = []
 for i in hex:
     if i in '0123456789':
-        lista.append(int(i))
+        hexadecimal.append(int(i))
     else:
         num = verificacao()
-        lista.append(num)
+        hexadecimal.append(num)
 
-total = 0
-potencia = len(lista)
-for i in lista:
-    potencia -= 1
-    total += i * (16 ** potencia)
-print(f'O número Hexadecimal "{hex}" convertido para Decimal fica: {total}')
+print(f'O número Hexadecimal "{hex}" convertido para Decimal fica: {transformacao()}')
